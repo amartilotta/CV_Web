@@ -1,0 +1,21 @@
+{
+    "welcome": "Welcome",
+    "about": "About Me",
+    "contact": "Contact",
+    "profile": "Profile",
+    "location": "Location",
+    "interests": "Interests",
+    "education": "Education",
+    "work-experience": "Work Experience",
+    "phone": "Phone",
+    "email": "Email",
+    "personal-details": "Personal details",
+    "creative-ideas": "Me dedico a producir ideas creativas y originales para mis clientes",
+    "creative-ideas-description": "", 
+    "profile-description": "",
+    "location-description":"",
+    "skills": "My abilities",
+    "specialize-in": "I specialize in",
+    "preparation-and-experience": "My preparation and experience",
+    "get-in-touch": "Get in touch with me to get to know each other better!"
+  }
