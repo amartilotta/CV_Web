@@ -14,7 +14,7 @@ html{
 /* SECCION INICIO */
 .inicio{
     background: linear-gradient(rgba(0,0,0.3), rgba(0,0,0,.3)),
-    url("images/background1.jpg");
+    url("images/background_image_cv.jpg");
     background-size: cover;
     background-position: center center;
     color: #fff;
@@ -83,6 +83,10 @@ html{
 .inicio .contenido-seccion header .nav-bar:hover{
     box-shadow: 0 0 35px #fff;
 }
+.inicio .contenido-seccion header .languageSwitcher {
+    position: fixed;
+    background-color: #0d3385
+}
 .inicio .contenido-seccion .info{
     padding-bottom: 130px;
 }
@@ -103,7 +107,7 @@ html{
     display: inline-block;
     text-decoration: none;
     background-color: #000;
-    color: #0d3385;
+    color: #0d47c4;
     border: 1px solid #0d3385;
     border-radius: 50%;
     width: 40px;
@@ -181,12 +185,30 @@ html{
     font-weight: bold;
     margin: 8px 0;
 }
+/* Estilos para la lista en la sección Sobre Mi */
+.sobremi .contenido-seccion .skills-list {
+    list-style-type: disc; /* Tipo de marcador para los elementos de la lista */
+    margin: 20px auto; /* Espacio alrededor de la lista */
+    padding-left: 20px; /* Espacio de relleno a la izquierda */
+    max-width: 700px; /* Mantener el ancho máximo coherente con otros párrafos */
+    text-align: left; /* Alineación a la izquierda para la lista */
+}
+
+.sobremi .contenido-seccion .skills-list li {
+    margin-bottom: 10px; /* Espacio inferior entre los elementos de la lista */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    color: #666; /* Color del texto coherente con otros párrafos */
+}
+
+.sobremi .contenido-seccion .skills-list li strong {
+    color: #0d3385; /* Color del texto en negrita coherente con otros elementos especiales */
+}
 /* SECCION HABILIDADES */
 .habilidades{
     padding: 80px 0 100px 0;
     text-align: center;
     background: linear-gradient(rgba(0,0,0.3), rgba(0,0,0,.3)),
-    url("circuito.jpg");
+    url("images/circuito.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;

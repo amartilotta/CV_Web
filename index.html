@@ -10,8 +10,14 @@
 <body>
     <!-- SECCION INICIO -->
      <!-- Selector de Idioma -->
-
-    </select>
+      <!-- Selector de Idioma -->
+      <div class="language-selector">
+        <label for="languageSwitcher">Idioma:</label>
+        <select id="languageSwitcher">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <!-- Puedes agregar más idiomas aquí -->
+        </select>
     <section class="inicio" id="inicio">
         <div class="contenido-seccion">
             <header>
@@ -28,6 +34,13 @@
                 <div class="logo">
                     A<span class="color">M</span>
                 </div>
+              <!--   <div class="languageSwitcher">
+                    <i class="fa-solid fa-language"></i>
+                    <nav id="nav-languageSwitcher" class="nav-languageSwitcher" >
+                        <a>English</a>
+                        <a>Español</a>
+                    </nav>
+                </div>-->
             </header>
             <div class="info">
                 <h1 data-i18n="name">AGUSTIN MARTILOTTA</h1>
@@ -38,7 +51,7 @@
                 </div>
             </div>
             <div class="foto">
-                <img src="foto_perfil.jpg" alt="">
+                <img src="images/foto_perfil.jpg" alt="">
             </div>
         </div>
     </section>
@@ -50,23 +63,40 @@
             <h3 data-i18n="personal-details">Detalles personales</h3>
 
             <p class="especial" data-i18n="creative-ideas">Me dedico a desarrollar codigo limpio utilizando las buenas prácticas de la programación</p>
-            <p data-i18n="creative-ideas-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nobis! Sit, veniam aut omnis est suscipit itaque tempore fugiat! Repellat, necessitatibus. Neque quis, reprehenderit fugit dolore voluptate nam eum reiciendis!</p>
+            <p data-i18n="creative-ideas-description">
+                Me llamo Agustín Martilotta, y soy un apasionado Backend Developer con 4 años de experiencia en la creación de soluciones tecnológicas que optimizan la eficiencia y la funcionalidad de las empresas. 
+                Desde joven, he tenido una gran fascinación por la tecnología y la programación, lo que me llevó a especializarme en Python y a desarrollar habilidades en frameworks como FastApi y Flask. 
+                Me enorgullece mi capacidad para resolver problemas complejos y mi dedicación a la mejora continua.
+            </p>
 
             <div class="fila">
                 <div class="col">
                     <i class="fa-solid fa-user"></i>
                     <span class="titulo-detalle" data-i18n="profile">Perfil</span>
-                    <p data-i18n="profile-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, provident esse. Nesciunt quod eveniet dolorem necessitatibus iure, suscipit similique provident fugiat excepturi commodi</p>
+                    <p data-i18n="profile-description">Soy un Backend Developer especializado en Python con 4 años de experiencia en el desarrollo de aplicaciones y servicios robustos. Tengo experiencia en:
+                        <ul class="skills-list">
+                            <li><strong>Frameworks:</strong> FastApi, Flask.</li>
+                            <li data-i18n="apis"><strong>APIs:</strong> Creación y mantenimiento de APIs RESTful.</li>
+                            <li data-i18n="data-bases"><strong>Bases de Datos:</strong> MySQL, MongoDB.</li>
+                            <!-- <li><strong>DevOps:</strong> Implementación de CI/CD con Jenkins y Docker, despliegue en AWS y Heroku.</li>-->
+                            <!-- <li><strong>Seguridad:</strong> Aseguramiento de la seguridad en todas las capas de la aplicación.</li> -->
+                            <li data-i18n="optimization"><strong>Optimización:</strong> Diseño de arquitecturas escalables y optimización del rendimiento del servidor.</li>
+                          </ul>
+                    </p>
                 </div>
                 <div class="col">
                     <i class="fa-solid fa-location-pin"></i>
                     <span class="titulo-detalle" data-i18n="location">Ubicación</span>
-                    <p data-i18n="location-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, provident esse. Nesciunt quod eveniet dolorem necessitatibus iure, suscipit similique provident fugiat excepturi commodi</p>
+                    <p data-i18n="location-description">Resido en Monza, Italia. Estoy abierto a oportunidades que requieran viajar y también me siento cómodo trabajando de forma remota, 
+                        aprovechando herramientas colaborativas para mantener una comunicación y productividad óptimas. Asimismo, no tengo inconvenientes en trabajar bajo esquemas híbridos 
+                        o presenciales.</p>
                 </div>
                 <div class="col">
                     <i class="fa-solid fa-flag"></i>
                     <span class="titulo-detalle" data-i18n="interests">Intereses</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, provident esse. Nesciunt quod eveniet dolorem necessitatibus iure, suscipit similique provident fugiat excepturi commodi</p>
+                    <p data-i18n="interests-description">Me apasiona estar al tanto de las últimas tecnologías y tendencias en el desarrollo de software. Además, disfruto de actividades físicas como el trekking, la calistenia 
+                        y la acrobacia de piso, que me ayudan a mantenerme en forma y a liberar el estrés. Para mí, la programación no es solo una profesión, sino una forma de arte. Me encanta 
+                        crear soluciones elegantes y eficientes que resuelvan problemas complejos y mejoren la vida de las personas.</p>
                 </div>
             </div>
         </div>
@@ -85,7 +115,7 @@
                         <div class="barra" id="python">
                             <!-- mediante javascript luego genereremos 17 barritas con clase e -->
                         </div>
-                        <span>Avanzado</span>
+                        <span data-i18n="advanced">Avanzado</span>
                     </div>
                 </div>
                 <div class="col">
@@ -94,7 +124,7 @@
                         <div class="barra" id="javascript">
                             <!-- mediante javascript luego genereremos 17 barritas con clase e -->
                         </div>
-                        <span>Intermedio</span>
+                        <span data-i18n="intermediate">Intermedio</span>
                     </div>
                 </div>
             </div>
@@ -105,7 +135,7 @@
                         <div class="barra" id="java">
                             <!-- mediante javascript luego genereremos 17 barritas con clase e -->
                         </div>
-                        <span>Básico</span>
+                        <span data-i18n="basic">Básico</span>
                     </div>
                 </div>
                 <div class="col">
@@ -114,7 +144,7 @@
                         <div class="barra" id="git">
                             <!-- mediante javascript luego genereremos 17 barritas con clase e -->
                         </div>
-                        <span>Avanzado</span>
+                        <span data-i18n="advanced">Avanzado</span>
                     </div>
                 </div>
             </div>
@@ -125,7 +155,7 @@
                         <div class="barra" id="sql">
                             <!-- mediante javascript luego genereremos 17 barritas con clase e -->
                         </div>
-                        <span>Inter/Avanzado</span>
+                        <span data-i18n="inter-advanced">Inter/Avanzado</span>
                     </div>
                 </div>
                 <div class="col">
@@ -134,7 +164,7 @@
                         <div class="barra" id="mongodb">
                             <!-- mediante javascript luego genereremos 17 barritas con clase e -->
                         </div>
-                        <span>Inter/Avanzado</span>
+                        <span data-i18n="inter-advanced">Inter/Avanzado</span>
                     </div>
                 </div>
             </div>
@@ -145,7 +175,7 @@
                         <div class="barra" id="redis">
                             <!-- mediante javascript luego genereremos 17 barritas con clase e -->
                         </div>
-                        <span>Intermedio</span>
+                        <span data-i18n="intermediate">Intermedio</span>
                     </div>
                 </div>
                 <div class="col">
@@ -154,7 +184,7 @@
                         <div class="barra" id="postman">
                             <!-- mediante javascript luego genereremos 17 barritas con clase e -->
                         </div>
-                        <span>Avanzado</span>
+                        <span data-i18n="advanced">Avanzado</span>
                     </div>
                 </div>
             </div>
@@ -171,16 +201,19 @@
                     <span class="titulo" data-i18n="education">Educación</span>
                     <table>
                         <tr>
-                            <td class="datos">
+                            <td class="datos" data-i18n="education-degree">
                                 <h3>2019 - En curso</h3>
                             </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
+                            <td rowspan="2" class="descripcion" data-i18n="education-degree-description">
+                                Actualmente estoy cursando la Licenciatura en Programación en Informática en la Universidad de Quilmes. Durante mi formación, estoy adquiriendo una sólida base en el 
+                                <b>desarrollo de software</b>, algoritmos, <b>estructuras de datos</b>, y <b>patrones de diseño</b>. Mi estudio abarca tanto la teoría fundamental como aplicaciones prácticas en diversos 
+                                lenguajes de programación y tecnologías, incluyendo el uso de patrones de diseño para crear soluciones más eficientes y mantenibles. Esta formación integral me está 
+                                preparando para enfrentar desafíos complejos en el campo de la informática.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <h4>Lic. en Programación en Informática</h4>
+                                <h4 data-i18n="education-degree-name">Lic. en Programación en Informática</h4>
                                 <p>Universidad de Quilmes</p>
                                 <!-- <span class="promedio">8.9 PG</span> -->
                             </td>
@@ -191,13 +224,16 @@
                             <td class="datos">
                                 <h3>2023 - 2024</h3>
                             </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
+                            <td rowspan="2" class="descripcion" data-i18n="education-coder-description">
+                                En el curso de Backend con Coderhouse, aprendí a desarrollar aplicaciones modernas con <b>Node.js</b> y <b>MongoDB</b>. Me enfoqué en <b>JavaScript del lado del servidor</b>, 
+                                utilizando técnicas asincrónicas para mejorar el rendimiento. Adquirí habilidades en comunicación entre servicios, manejo de procesos distribuidos, y control de grandes 
+                                volúmenes de datos. También me preparé para el despliegue en distintas plataformas web, asegurando soluciones escalables y robustas. Esta formación me ha preparado para 
+                                construir y gestionar aplicaciones backend efectivas en el entorno web actual.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <h4>Carrera Backend</h4>
+                                <h4 data-i18n="education-coder-name">Carrera Backend</h4>
                                 <p>CorderHouse</p>
                                 <!-- <span class="promedio">8.9 PG</span> -->
                             </td>
@@ -211,14 +247,17 @@
                             <td class="datos">
                                 <h3>5 Meses</h3>
                             </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
+                            <td rowspan="2" class="descripcion" data-i18n="backend-banza-description">
+                                En <b>Banza</b>, desarrollo y mantengo servicios backend utilizando <b>Python</b> y <b>FastAPI</b>, optimizando continuamente el rendimiento y la escalabilidad de la aplicación. 
+                                Trabajo con <b>AWS Lambda</b> para funciones sin servidor y gestiono bases de datos <b>MySQL</b> para asegurar la integridad de los datos. Utilizo <b>Elasticsearch</b> para mejorar 
+                                la búsqueda y el análisis, y <b>Redis</b> para gestionar cachés y acelerar el rendimiento. Implemento autenticación segura mediante <b>JWT</b> y realizo pruebas con <b>Postman</b>. 
+                                Colaboro con el equipo usando <b>Bitbucket</b> y <b>Git</b> para el control de versiones y la gestión del código.
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <h4>Banza</h4>
-                                <p>Desarrollador Backend</p>
+                                <p data-i18n="backend-banza-name">Desarrollador Backend</p>
                             </td>
                         </tr>
                     </table>
@@ -227,14 +266,18 @@
                             <td class="datos">
                                 <h3>3 Años</h3>
                             </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
+                            <td rowspan="2" class="descripcion" data-i18n="backend-leafnoise-description">
+                                Como Desarrollador Backend en <b>Leafnoise</b> durante 3 años, adquirí una sólida experiencia en el desarrollo backend, trabajando con <b>Python</b> y <b>Flask</b> para crear 
+                                y mantener una aplicación robusta y escalable. Aprendí y apliqué metodologías ágiles como <b>Scrum</b> y herramientas de gestión de proyectos como <b>Jira</b>.
+                                Colaboré con clientes nacionales, incluyendo <b>ANSES</b> y varios municipios, en la creación y mantenimiento de <b>Moorea</b>, una aplicación para digitalizar trámites. 
+                                Esta experiencia me permitió profundizar en la implementación de soluciones personalizadas. Utilicé <b>MongoDB</b> para la gestión de datos no relacionales y <b>Docker</b> 
+                                para la contenedorización de la aplicación, mejorando la portabilidad y consistencia.                          
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <h4>Leafnoise</h4>
-                                <p>Desarrollador Backend</p>
+                                <p data-i18n="backend-leafnoise-name">Desarrollador Backend</p>
                             </td>
                         </tr>
                     </table>

@@ -48,6 +48,56 @@ links.forEach(link => {
 });
 
 // ------------------ MENÚ ------------------------
+// ------------------ IDIOMA ------------------------
+let lenguaje_visible = false;
+let lenguage = document.querySelector("nav-languageSwitcher");
+let options = document.querySelectorAll("nav-languageSwitcher a");
+function showHideLenguaje() {
+    if (!lenguaje_visible) { // Si está oculto
+        // Calcular la altura del contenido del menú
+        let contentHeight = menu.scrollHeight; // La altura total del contenido del menú
+        lenguage.style.maxHeight = contentHeight + "px"; // Ajustar max-height dinámicamente
+        lenguage.classList.add("visible");
+        lenguaje_visible = true;
+
+        // Animar la aparición de los enlaces
+        options.forEach((link, index) => {
+            setTimeout(() => {
+                link.style.opacity = 1; // Hacer visibles los enlaces uno a uno
+            }, index * 100); // Ajustar el retraso entre cada enlace
+        });
+    } else {
+        lenguage.style.maxHeight = "0"; // Ocultar el menú
+        lenguage.classList.remove("visible");
+        lenguaje_visible = false;
+
+        // Ocultar los enlaces al cerrar el menú
+        options.forEach(link => {
+            link.style.opacity = 0;
+        });
+    }
+}
+
+// Ocultar el menú una vez que selecciono una opción
+options.forEach(link => {
+    options.addEventListener("click", function() {
+        // Solo cerrar el menú si está abierto
+        if (lenguaje_visible) {
+            lenguage.style.maxHeight = "0";
+            lenguage.classList.remove("visible");
+            lenguaje_visible = false;
+
+            // Ocultar los enlaces al cerrar el menú
+            options.forEach(link => {
+                link.style.opacity = 0;
+            });
+        }
+    });
+});
+
+
+// ------------------ IDIOMA ------------------------
+
 
 // ------------------ HABILIDADES ------------------------
 
@@ -166,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 elementsToTranslate.forEach(element => {
                     const key = element.getAttribute('data-i18n');
                     if (translations[key]) {
-                        element.textContent = translations[key];
+                        element.innerHTML = translations[key];
                     }
                 });
             })
